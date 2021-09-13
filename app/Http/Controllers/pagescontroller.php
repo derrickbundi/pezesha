@@ -22,6 +22,7 @@ class pagescontroller extends Controller
         if(Cache::has('fetch_')) {
             $data = Cache::get('fetch_');
         } else {
+            //if  no data cached fetch them from endpoint
             $cache = $this->display_characters();
             $data = Cache::get('fetch_');
         }
